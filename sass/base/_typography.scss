@@ -1,0 +1,35 @@
+body {
+    font-family: "Avenir Next Medium";
+    font-weight: 500;
+    color: $color-base-dark;
+}
+
+.heading-h1 {
+   font-size: $font-size-h1;
+   font-family: "Avenir Next Demibold";
+   font-weight: bold;
+   line-height: 3rem;
+}
+.heading-h2 {
+    font-size: $font-size-h2;
+    line-height: 2.5rem;
+    &--bold {
+        font-weight: bold;
+    }
+ }
+ .heading-h3 {
+    font-size: $font-size-h3;
+    line-height: 2.1rem;
+    &--bold {
+        font-weight: bold;
+    }
+ }
+ .heading-h4 {
+    font-size: $font-size-h4;
+    line-height: 1.8rem;
+ }
+ .heading-h5 {
+    font-size: $font-size-h5;
+    line-height: 1.6rem;
+ }
+
