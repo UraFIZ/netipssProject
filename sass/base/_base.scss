@@ -22,9 +22,9 @@ html {
         font-size: 40%; //1 rem = 7px, 9/16 = 46%
     }
     
-    @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12, 12/16
-    }
+    // @include respond(big-desktop) {
+    //     font-size: 75%; //1rem = 12, 12/16
+    // }
 }
 
 body {

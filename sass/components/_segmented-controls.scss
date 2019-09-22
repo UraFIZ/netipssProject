@@ -1,0 +1,15 @@
+.thanks-controls {
+    width: 4.6rem;
+    text-align: center;
+    &_amount {
+        margin-top: 1.4rem;
+        margin-bottom: .3rem;
+        font-size: $default-font-size;
+        font-weight: bold;
+        color: $color-base-dark;
+    }
+    &_lable {
+        font-size: 1.4rem;
+        color:$color-base-gray;
+    }
+}

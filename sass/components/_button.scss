@@ -1,114 +1,120 @@
 .btn {
-    &,
-    &:link,
-    &:visited {
-        color: white;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        display: inline-block;
-        border-radius: 1.1rem;
-        transition: all .2s;
-        position: relative;
-        font-size: $default-font-size;
-background-image: linear-gradient(to right, $color-primary, $color-primary-light);
-        //Change for the <button> element
-        border: none;
-        cursor: pointer;
-    }
+    display: inline-block;
+    transition: all;
+    color: white;
+    text-decoration: none;
+    font-size: $default-font-size;
+    font-weight: bold;
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  &-primary,
+  &-primary:link,
+  &-primary:visited {
+    padding: 1.35rem 0;
+    border-radius: 1.1rem;
+    background: linear-gradient(
+      to right,
+      $color-primary,
+      $color-primary-light
+    );
+    width: 31.5rem;
+    
+  }
+  &-primary--border {
+    background-color: white;
+    padding: 1.35rem 0;
+    border-radius: 1.1rem;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    width: 31.5rem;
+    text-align: center;
+  }
+  &-primary:focus {
+    outline: none;
+  }
+  &-primary:hover {
+    color: $color-secondary-pink_apricot
+  }
+  &-primary:active {
+    box-shadow: 0rem 0.2rem 1rem $color-secondary-pink_apricot
+  }
+  &-secondary {
+    padding: 1.35rem 0;
+    background-color: #F2EAFD;
+    color: $color-primary;
+    border-radius: .4rem;
+    width: 31.5rem;
+    
+  }
+  &-secondary--fb{
+      background-image: url(../../img/facebook-logo-5.png);
+      background-repeat: no-repeat;
+      background-position: 10% 50%;
+      
+  }
+  &-secondary:active {
+      color: red;
+  }
+  &-secondary--border {
+    padding: 1.35rem 0;
+    border-radius: 1.1rem;
+    border-color:  $color-primary;
+  }
+  &-circle {
+    width: 5.3rem;
+    height: 5.3rem;
+    background: linear-gradient(
+        45deg,
+        $color-primary,
+        $color-primary-light
+      );
+    border-radius: 50%;
+    text-align: center;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0rem 0.2rem 2rem rgba($color-primary, 0.8)
+    
+  }
+  &-circle:active {
+    box-shadow: none;
+  }
+  &-thanks {
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+      &--active {
+        background-image: url(../../img/pray-2.png);
+        background-color: white;
+        border: 1px solid $color-primary;
+        background-position: 50%;
+      }
+      &--inactive {
+          position: relative;
+        background: linear-gradient(
+            45deg,
+            $color-primary,
+            $color-primary-light
+          );
+      &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-image: url(../../img/pray.png);
+          width: inherit;
+          height: inherit;
+          background-repeat: no-repeat;
+          background-position: 50%;
+      }
+      }
+  }
+
 }
-/* .btn {
-    &,
-    &:link,
-    &:visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding: 1.5rem 4rem;
-        display: inline-block;
-        border-radius: 10rem;
-        transition: all .2s;
-        position: relative;
-        font-size: $default-font-size;
 
-        //Change for the <button> element
-        border: none;
-        cursor: pointer;
-    }
-    
-    &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($color-black,.2);
-
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-    }
-    
-    &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
-    }
-    
-    &--white {
-        background-color: $color-white;
-        color: $color-grey-dark;
-
-        &::after {
-            background-color: $color-white;
-        }
-    }
-
-    &--green {
-        background-color: $color-primary;
-        color: $color-white;
-
-        &::after {
-            background-color: $color-primary;
-        }
-    }
-    
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
-    }
-    
-    &--animated {
-        animation: moveInBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
-    }
-}
-
-.btn-text {
-    &:link,
-    &:visited {
-        font-size: $default-font-size;
-        color: $color-primary;
-        display: inline-block;
-        text-decoration: none;
-        border-bottom: 1px solid $color-primary;
-        padding: 3px;
-        transition: all .2s;
-    }
-
-    &:hover {
-        background-color: $color-primary;
-        color: $color-white;
-        box-shadow: 0 1rem 2rem rgba($color-black, .15);
-        transform: translateY(-2px);
-    }
-
-    &:active {
-        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
-        transform: translateY(0);
-    }
-} */

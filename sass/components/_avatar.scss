@@ -1,0 +1,21 @@
+.avatar {
+    position: relative;
+    width: fit-content;
+    &__crown--left {
+        position: absolute;
+        left: -6px;
+    }
+    &__crown--right {
+        position: absolute;
+        right: -5px;
+    }
+    &__dot {
+        position: absolute;
+        bottom: 3px;
+        right: 2px;
+    }
+    &__name {
+        font-weight: bold;
+        font-size: $default-font-size;
+    }
+}

@@ -31,5 +31,12 @@ body {
  .heading-h5 {
     font-size: $font-size-h5;
     line-height: 1.6rem;
+    color: $color-base-dark_gray;
  }
+ .heading-h5--bold {
+   font-size: $font-size-h5;
+   line-height: 1.6rem;
+   color: $color-base-dark;
+   font-weight: bold;
+}
 
