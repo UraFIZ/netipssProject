@@ -115,6 +115,14 @@
       }
       }
   }
-
+&__interactive {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: $border-grey;
+    padding: 1.2rem 1.7rem;
+    border-radius: 12px;
+}
 }
 

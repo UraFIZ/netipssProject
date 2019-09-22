@@ -13,3 +13,9 @@
         color:$color-base-gray;
     }
 }
+.topic {
+    width: fit-content;
+    padding: 4px 10px;
+    border: $border-grey;
+    border-radius: 2rem;
+}

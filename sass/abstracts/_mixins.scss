@@ -29,10 +29,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media only screen and (max-width: 37.5em) { @content };    //600px
     }
     @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) { @content };     //900px
+        @media only screen and (max-width: 53.75em) { @content };     //860px
     }
     @if $breakpoint == tab-land {
         @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 83.75em) { @content };    //1340px
     }
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 112.5em) { @content };    //1800

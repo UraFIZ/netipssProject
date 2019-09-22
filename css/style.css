@@ -35,7 +35,7 @@ html {
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 53.75em) {
     html {
       font-size: 50%; } }
   @media only screen and (max-width: 37.5em) {
@@ -44,7 +44,7 @@ html {
 
 body {
   box-sizing: border-box; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 53.75em) {
     body {
       padding: 0; } }
 
@@ -65,13 +65,15 @@ body {
 
 .heading-h2 {
   font-size: 1.6rem;
-  line-height: 2.5rem; }
+  line-height: 2.3rem; }
   .heading-h2--bold {
+    font-size: 1.6rem;
+    line-height: 2.0rem;
     font-weight: bold; }
 
 .heading-h3 {
   font-size: 1.4rem;
-  line-height: 2.1rem; }
+  line-height: 1.9rem; }
   .heading-h3--bold {
     font-weight: bold; }
 
@@ -98,13 +100,13 @@ body {
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 53.75em) {
     .u-margin-bottom-medium {
       margin-bottom: 3rem !important; } }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 53.75em) {
     .u-margin-bottom-big {
       margin-bottom: 5rem !important; } }
 
@@ -248,6 +250,14 @@ body {
         height: inherit;
         background-repeat: no-repeat;
         background-position: 50%; }
+  .btn__interactive {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid #EBECED;
+    padding: 1.2rem 1.7rem;
+    border-radius: 12px; }
 
 .card {
   display: flex;
@@ -289,7 +299,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 275px;
-    box-shadow: 0rem 1rem 3rem #95989A;
+    box-shadow: 0rem -3px 9px  #95989A;
     padding: 5px 8px;
     display: flex;
     justify-content: center;
@@ -298,6 +308,18 @@ body {
     background-color: white; }
   .card__main {
     padding: 3rem 2rem 1rem 2rem; }
+  .card__topic {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 0 1.7rem 0; }
+  .card__topic > * {
+    margin-right: 1rem; }
+  .card__topic > *:nth-child(-n+5) {
+    margin-right: 1rem;
+    margin-bottom: 1rem; }
+  .card__interactive-btn {
+    display: flex;
+    justify-content: space-between; }
 
 .thanks-controls {
   width: 4.6rem;
@@ -311,6 +333,12 @@ body {
   .thanks-controls_lable {
     font-size: 1.4rem;
     color: #C6C9CE; }
+
+.topic {
+  width: fit-content;
+  padding: 4px 10px;
+  border: 1px solid #EBECED;
+  border-radius: 2rem; }
 
 .form__group {
   position: relative;
@@ -448,25 +476,22 @@ body {
     margin-bottom: 4rem; }
   .row [class^="col-"] {
     margin-bottom: 1.6rem; }
-    @media only screen and (max-width: 56.25em) {
-      .row [class^="col-"] {
-        margin-bottom: 1.6rem; } }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 1.6rem; }
-      @media only screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 83.75em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0; } }
   .row .col-1-of-2 {
     flex: 0 0 calc((100% - 1.6rem) / 2); }
   .row .col-1-of-3 {
     flex: 0 0 calc((100% - 2 * 1.6rem) / 3); }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 83.75em) {
       .row .col-1-of-3 {
         flex: 0 0 calc((100% - 1.6rem) / 2); } }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 53.75em) {
       .row .col-1-of-3 {
         flex: 0 0 100%; } }
-  .row .col-1-of-3:nth-child(n+3) {
+  .row .col-1-of-3:nth-child(3n + 0) {
     margin-right: 0; }
   .row .col-2-of-3 {
     flex: 0 0 calc(2 * ((100% - 2 * 1.6rem) / 3) + 1.6rem); }

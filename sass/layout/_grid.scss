@@ -41,20 +41,13 @@
 
     [class^="col-"] {
         margin-bottom: $gutter-horizontal;
-        @include respond(tab-port) {
-            margin-bottom: $gutter-horizontal;
-
-        }
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
-            @include respond(tab-port) {
+            @include respond(desktop) {
                 margin-right: 0;
             }
         }
 
-        // @include respond(tab-port) {
-        //     width: 100% !important;
-        // }
     }
 
     .col-1-of-2 {
@@ -63,14 +56,14 @@
 
     .col-1-of-3 {
         flex: 0 0 calc((100% - 2 * #{$gutter-horizontal}) / 3);
-        @include respond(tab-land) {
+        @include respond(desktop) {
             flex: 0 0 calc((100% - #{$gutter-horizontal}) / 2); 
         }
         @include respond(tab-port) {
             flex: 0 0 100%;
         }
     }
-    .col-1-of-3:nth-child(n+3){
+    .col-1-of-3:nth-child(3n + 0){
         margin-right: 0;
     }
 

@@ -43,7 +43,7 @@
     &__rating-container {
         @include absCenter;
         width: 275px;
-        box-shadow: 0rem 1rem 3rem #95989A;
+        box-shadow: 0rem -3px 9px  #95989A;
         padding: 5px 8px;
         display: flex;
         justify-content: center;
@@ -53,5 +53,21 @@
     }
     &__main {
         padding: 3rem 2rem 1rem 2rem;
+    }
+    &__topic {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1.5rem 0 1.7rem 0;
+    }
+    &__topic > * {
+      margin-right: 1rem;
+    }
+    &__topic > *:nth-child(-n+5) {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+      }
+    &__interactive-btn {
+        display: flex;
+    justify-content: space-between;
     }
 }

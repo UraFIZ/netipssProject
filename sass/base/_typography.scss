@@ -12,14 +12,16 @@ body {
 }
 .heading-h2 {
     font-size: $font-size-h2;
-    line-height: 2.5rem;
+    line-height: 2.3rem;
     &--bold {
+      font-size: $font-size-h2;
+      line-height: 2.0rem;
         font-weight: bold;
     }
  }
  .heading-h3 {
     font-size: $font-size-h3;
-    line-height: 2.1rem;
+    line-height: 1.9rem;
     &--bold {
         font-weight: bold;
     }
