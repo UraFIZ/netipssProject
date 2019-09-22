@@ -9,9 +9,11 @@ body {
    font-family: "Avenir Next Demibold";
    font-weight: bold;
    line-height: 3rem;
+   text-align: center;
 }
 .heading-h2 {
     font-size: $font-size-h2;
+    font-weight: normal;
     line-height: 2.3rem;
     &--bold {
       font-size: $font-size-h2;

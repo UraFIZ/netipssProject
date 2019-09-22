@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Netips</title>
+</head>
+
+<body>
+  <header class="header"></header>
+
+  <main>
+    <section class="section-about">
+      <div class="content-container ">
+        <div class="row">
+          <div class="col-1-of-2">
+            <button class="btn btn-primary">Tip the world</button>
+          </div>
+          <div class="col-1-of-2">
+            <a href="#" class="btn btn-secondary btn-secondary--fb">Sign in With Facebook</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <a href="#" class="btn btn-circle">+</a>
+          </div>
+          <div class="col-1-of-2">
+            <a href="#" class="btn btn-primary--border">Get a tip</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="thanks-controls">
+              <div class="btn-thanks btn-thanks--active"></div>
+              <div class="thanks-controls_amount">56</div>
+              <div class="thanks-controls_lable">Thanks</div>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="thanks-controls">
+              <div class="btn-thanks btn-thanks--inactive"></div>
+              <div class="thanks-controls_amount">56</div>
+              <div class="thanks-controls_lable">Thanks</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1-of-3">
+            <div class="form">
+              <div class="form__group">
+                <input class="form__input" type="text" name="text" id="text" placeholder="Alex Clare">
+                <label for="text" class="form__label ">Nickname</label>
+              </div>
+              <div class="form__group">
+                <input class="form__input__error" type="text" name="text" id="text" placeholder="Alex Clare">
+                <label for="text" class="form__label">Nickname</label>
+                <p class="form__notification">This is incorrect</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="form">
+              <div class="form__group">
+                <input class="form__input form__input__icon" type="email" name="email" id="email"
+                  placeholder="Enter your email">
+                <img class="form__icon--person" src="./img/person.png" alt="icon for input">
+              </div>
+              <div class="form__group">
+                <input class="form__input__error form__input__error--icon" type="email" name="email" id="email"
+                  placeholder="Enter your email">
+                <img class="form__icon--person form__icon--person--error" src="./img/person.png" alt="icon for input">
+                <p class="form__notification">This is incorrect</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="form">
+              <div class="form__group">
+                <input class="form__input form__input__icon" type="password" name="password" id="password"
+                  placeholder="Enter your password">
+                <img class="form__icon--password" src="./img/keyLittle.png" alt="icon for input">
+              </div>
+              <div class="form__group">
+                <input class="form__input__error form__input__error--icon" type="password" name="password" id="password"
+                  placeholder="Enter your email">
+                <img class="form__icon--password form__icon--password--error" src="./img/keyLittle.png"
+                  alt="icon for input">
+                <p class="form__notification">This is incorrect</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__header">
+                <div class="avatar card-avatar">
+                  <img class="avatar__img" src="./img/avatar.png" alt="avatar"
+                    srcset="./img/avatar.png 1x, ./img/avatar@2x.png 2x">
+                  <img class="avatar__crown--left" src="./img/crown2x.png" alt="avatar"
+                    srcset="./img/crown.png 1x, ./img/crown2x.png 2x">
+                  <img class="avatar__dot" src="./img/dot.png" alt="avatar"
+                    srcset="./img/dot.png 1x, ./img/dot@2x.png 2x">
+                </div>
+                <div class="container card--colomn u-margin-left-1">
+                  <div class="row-content">
+                    <p class="avatar__name u-margin-bottom-05">Alen walker</p>
+                  </div>
+                  <div class="row-content">
+                    <p class="card__data">15th Apr, 19</p>
+                    <div class="row-content u-margin-left-15">
+                      <button class="btn btn-primary card__btn">Expert</button>
+                      <button class="btn btn-primary card__btn">Follower</button>
+                      <button class="btn btn-primary card__btn">Beginner</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-content card__functional-btn u-margin-right-2">
+                  <a href="#" class="card__share"><img src="./img/share.png" alt="shared card's botton"
+                      srcset="./img/share.png 1x, ./img/share@2x.png 2x"></a>
+                  <a href="#" class="card__save u-margin-left-3"><img src="./img/save.png" alt="save card's botton"
+                      srcset="./img/save.png 1x, ./img/save2x.png 2x"></a>
+                </div>
+              </div>
+              <div class="card__image-container">
+                <a href="#">
+                  <img class="card__image" src="img/card-img.png" alt="card's image"
+                    srcset="img/card-img.png 1x, img/card-img@2x.png 2x img/card-img@2x.png 3x">
+                </a>
+              </div>
+              <div class="card__rating">
+                <div class="card__rating-container">
+                  <p class="heading-h5">Rated: <span class="heading-h5--bold">Commercial</span> </p>
+                  <img class="u-margin-left-1" src="img/stars-rating.png" alt="stars rating"
+                    srcset="img/stars-rating.png 1x, img/stars-rating@2x.png 2x, img/stars-rating@2x.png 3x">
+                </div>
+              </div>
+              <div class="card__main">
+                <div class="card__text-content">
+                  <div class="card__title">
+                    <p class="heading-h2--bold">A movie that yells at you and geeks out in equal measures.</p>
+                    <p class="heading-h3">Going on a trip to America, looking for someone to join me on this epic
+                      journey
+                      through American…</p>
+                  </div>
+                </div>
+                <div class="card__topic">
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                </div>
+                <div class="card__interactive-btn">
+                  <div class="btn__interactive card-pray">
+                    <img class="u-margin-right-05" src="img/pray.png" alt="button to say thanks"
+                      srcset="img/pray.png 1x, img/pray@2x.png 2x, img/pray@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-share">
+                    <img class="u-margin-right-05" src="img/share.png" alt="button to say thanks"
+                      srcset="img/share.png 1x, img/share@2x.png 2x, img/share@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-money">
+                    <img class="u-margin-right-05" src="img/money-bag.png" alt="button to say thanks"
+                      srcset="img/money-bag.png 1x, img/money-bag@2x.png 2x, img/money-bag@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-dislike">
+                    <img class="u-margin-right-05" src="img/like.png" alt="button to say thanks"
+                      srcset="img/like.png 1x, img/like@2x.png 2x, img/like@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__header">
+                <div class="avatar card-avatar">
+                  <img class="avatar__img" src="./img/avatar.png" alt="avatar"
+                    srcset="./img/avatar.png 1x, ./img/avatar@2x.png 2x">
+                  <img class="avatar__crown--left" src="./img/crown2x.png" alt="avatar"
+                    srcset="./img/crown.png 1x, ./img/crown2x.png 2x">
+                  <img class="avatar__dot" src="./img/dot.png" alt="avatar"
+                    srcset="./img/dot.png 1x, ./img/dot@2x.png 2x">
+                </div>
+                <div class="container card--colomn u-margin-left-1">
+                  <div class="row-content">
+                    <p class="avatar__name u-margin-bottom-05">Alen walker</p>
+                  </div>
+                  <div class="row-content">
+                    <p class="card__data">15th Apr, 19</p>
+                    <div class="row-content u-margin-left-15">
+                      <button class="btn btn-primary card__btn">Expert</button>
+                      <button class="btn btn-primary card__btn">Follower</button>
+                      <button class="btn btn-primary card__btn">Beginner</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-content card__functional-btn u-margin-right-2">
+                  <a href="#" class="card__share"><img src="./img/share.png" alt="shared card's botton"
+                      srcset="./img/share.png 1x, ./img/share@2x.png 2x"></a>
+                  <a href="#" class="card__save u-margin-left-3"><img src="./img/save.png" alt="save card's botton"
+                      srcset="./img/save.png 1x, ./img/save2x.png 2x"></a>
+                </div>
+              </div>
+              <div class="card__image-container">
+                <a href="#">
+                  <img class="card__image" src="img/card-img.png" alt="card's image"
+                    srcset="img/card-img.png 1x, img/card-img@2x.png 2x img/card-img@2x.png 3x">
+                </a>
+              </div>
+              <div class="card__rating">
+                <div class="card__rating-container">
+                  <p class="heading-h5">Rated: <span class="heading-h5--bold">Commercial</span> </p>
+                  <img class="u-margin-left-1" src="img/stars-rating.png" alt="stars rating"
+                    srcset="img/stars-rating.png 1x, img/stars-rating@2x.png 2x, img/stars-rating@2x.png 3x">
+                </div>
+              </div>
+              <div class="card__main">
+                <div class="card__text-content">
+                  <div class="card__title">
+                    <p class="heading-h2--bold">A movie that yells at you and geeks out in equal measures.</p>
+                    <p class="heading-h3">Going on a trip to America, looking for someone to join me on this epic
+                      journey
+                      through American…</p>
+                  </div>
+                </div>
+                <div class="card__topic">
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                </div>
+                <div class="card__interactive-btn">
+                  <div class="btn__interactive card-pray">
+                    <img class="u-margin-right-05" src="img/pray.png" alt="button to say thanks"
+                      srcset="img/pray.png 1x, img/pray@2x.png 2x, img/pray@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-share">
+                    <img class="u-margin-right-05" src="img/share.png" alt="button to say thanks"
+                      srcset="img/share.png 1x, img/share@2x.png 2x, img/share@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-money">
+                    <img class="u-margin-right-05" src="img/money-bag.png" alt="button to say thanks"
+                      srcset="img/money-bag.png 1x, img/money-bag@2x.png 2x, img/money-bag@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-dislike">
+                    <img class="u-margin-right-05" src="img/like.png" alt="button to say thanks"
+                      srcset="img/like.png 1x, img/like@2x.png 2x, img/like@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__header">
+                <div class="avatar card-avatar">
+                  <img class="avatar__img" src="./img/avatar.png" alt="avatar"
+                    srcset="./img/avatar.png 1x, ./img/avatar@2x.png 2x">
+                  <img class="avatar__crown--left" src="./img/crown2x.png" alt="avatar"
+                    srcset="./img/crown.png 1x, ./img/crown2x.png 2x">
+                  <img class="avatar__dot" src="./img/dot.png" alt="avatar"
+                    srcset="./img/dot.png 1x, ./img/dot@2x.png 2x">
+                </div>
+                <div class="container card--colomn u-margin-left-1">
+                  <div class="row-content">
+                    <p class="avatar__name u-margin-bottom-05">Alen walker</p>
+                  </div>
+                  <div class="row-content">
+                    <p class="card__data">15th Apr, 19</p>
+                    <div class="row-content u-margin-left-15">
+                      <button class="btn btn-primary card__btn">Expert</button>
+                      <button class="btn btn-primary card__btn">Follower</button>
+                      <button class="btn btn-primary card__btn">Beginner</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-content card__functional-btn u-margin-right-2">
+                  <a href="#" class="card__share"><img src="./img/share.png" alt="shared card's botton"
+                      srcset="./img/share.png 1x, ./img/share@2x.png 2x"></a>
+                  <a href="#" class="card__save u-margin-left-3"><img src="./img/save.png" alt="save card's botton"
+                      srcset="./img/save.png 1x, ./img/save2x.png 2x"></a>
+                </div>
+              </div>
+              <div class="card__image-container">
+                <a href="#">
+                  <img class="card__image" src="img/card-img.png" alt="card's image"
+                    srcset="img/card-img.png 1x, img/card-img@2x.png 2x img/card-img@2x.png 3x">
+                </a>
+              </div>
+              <div class="card__rating">
+                <div class="card__rating-container">
+                  <p class="heading-h5">Rated: <span class="heading-h5--bold">Commercial</span> </p>
+                  <img class="u-margin-left-1" src="img/stars-rating.png" alt="stars rating"
+                    srcset="img/stars-rating.png 1x, img/stars-rating@2x.png 2x, img/stars-rating@2x.png 3x">
+                </div>
+              </div>
+              <div class="card__main">
+                <div class="card__text-content">
+                  <div class="card__title">
+                    <p class="heading-h2--bold">A movie that yells at you and geeks out in equal measures.</p>
+                    <p class="heading-h3">Going on a trip to America, looking for someone to join me on this epic
+                      journey
+                      through American…</p>
+                  </div>
+                </div>
+                <div class="card__topic">
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                </div>
+                <div class="card__interactive-btn">
+                  <div class="btn__interactive card-pray">
+                    <img class="u-margin-right-05" src="img/pray.png" alt="button to say thanks"
+                      srcset="img/pray.png 1x, img/pray@2x.png 2x, img/pray@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-share">
+                    <img class="u-margin-right-05" src="img/share.png" alt="button to say thanks"
+                      srcset="img/share.png 1x, img/share@2x.png 2x, img/share@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-money">
+                    <img class="u-margin-right-05" src="img/money-bag.png" alt="button to say thanks"
+                      srcset="img/money-bag.png 1x, img/money-bag@2x.png 2x, img/money-bag@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-dislike">
+                    <img class="u-margin-right-05" src="img/like.png" alt="button to say thanks"
+                      srcset="img/like.png 1x, img/like@2x.png 2x, img/like@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__header">
+                <div class="avatar card-avatar">
+                  <img class="avatar__img" src="./img/avatar.png" alt="avatar"
+                    srcset="./img/avatar.png 1x, ./img/avatar@2x.png 2x">
+                  <img class="avatar__crown--left" src="./img/crown2x.png" alt="avatar"
+                    srcset="./img/crown.png 1x, ./img/crown2x.png 2x">
+                  <img class="avatar__dot" src="./img/dot.png" alt="avatar"
+                    srcset="./img/dot.png 1x, ./img/dot@2x.png 2x">
+                </div>
+                <div class="container card--colomn u-margin-left-1">
+                  <div class="row-content">
+                    <p class="avatar__name u-margin-bottom-05">Alen walker</p>
+                  </div>
+                  <div class="row-content">
+                    <p class="card__data">15th Apr, 19</p>
+                    <div class="row-content u-margin-left-15">
+                      <button class="btn btn-primary card__btn">Expert</button>
+                      <button class="btn btn-primary card__btn">Follower</button>
+                      <button class="btn btn-primary card__btn">Beginner</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-content card__functional-btn u-margin-right-2">
+                  <a href="#" class="card__share"><img src="./img/share.png" alt="shared card's botton"
+                      srcset="./img/share.png 1x, ./img/share@2x.png 2x"></a>
+                  <a href="#" class="card__save u-margin-left-3"><img src="./img/save.png" alt="save card's botton"
+                      srcset="./img/save.png 1x, ./img/save2x.png 2x"></a>
+                </div>
+              </div>
+              <div class="card__image-container">
+                <a href="#">
+                  <img class="card__image" src="img/card-img.png" alt="card's image"
+                    srcset="img/card-img.png 1x, img/card-img@2x.png 2x img/card-img@2x.png 3x">
+                </a>
+              </div>
+              <div class="card__rating">
+                <div class="card__rating-container">
+                  <p class="heading-h5">Rated: <span class="heading-h5--bold">Commercial</span> </p>
+                  <img class="u-margin-left-1" src="img/stars-rating.png" alt="stars rating"
+                    srcset="img/stars-rating.png 1x, img/stars-rating@2x.png 2x, img/stars-rating@2x.png 3x">
+                </div>
+              </div>
+              <div class="card__main">
+                <div class="card__text-content">
+                  <div class="card__title">
+                    <p class="heading-h2--bold">A movie that yells at you and geeks out in equal measures.</p>
+                    <p class="heading-h3">Going on a trip to America, looking for someone to join me on this epic
+                      journey
+                      through American…</p>
+                  </div>
+                </div>
+                <div class="card__topic">
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                </div>
+                <div class="card__interactive-btn">
+                  <div class="btn__interactive card-pray">
+                    <img class="u-margin-right-05" src="img/pray.png" alt="button to say thanks"
+                      srcset="img/pray.png 1x, img/pray@2x.png 2x, img/pray@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-share">
+                    <img class="u-margin-right-05" src="img/share.png" alt="button to say thanks"
+                      srcset="img/share.png 1x, img/share@2x.png 2x, img/share@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-money">
+                    <img class="u-margin-right-05" src="img/money-bag.png" alt="button to say thanks"
+                      srcset="img/money-bag.png 1x, img/money-bag@2x.png 2x, img/money-bag@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-dislike">
+                    <img class="u-margin-right-05" src="img/like.png" alt="button to say thanks"
+                      srcset="img/like.png 1x, img/like@2x.png 2x, img/like@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__header">
+                <div class="avatar card-avatar">
+                  <img class="avatar__img" src="./img/avatar.png" alt="avatar"
+                    srcset="./img/avatar.png 1x, ./img/avatar@2x.png 2x">
+                  <img class="avatar__crown--left" src="./img/crown2x.png" alt="avatar"
+                    srcset="./img/crown.png 1x, ./img/crown2x.png 2x">
+                  <img class="avatar__dot" src="./img/dot.png" alt="avatar"
+                    srcset="./img/dot.png 1x, ./img/dot@2x.png 2x">
+                </div>
+                <div class="container card--colomn u-margin-left-1">
+                  <div class="row-content">
+                    <p class="avatar__name u-margin-bottom-05">Alen walker</p>
+                  </div>
+                  <div class="row-content">
+                    <p class="card__data">15th Apr, 19</p>
+                    <div class="row-content u-margin-left-15">
+                      <button class="btn btn-primary card__btn">Expert</button>
+                      <button class="btn btn-primary card__btn">Follower</button>
+                      <button class="btn btn-primary card__btn">Beginner</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-content card__functional-btn u-margin-right-2">
+                  <a href="#" class="card__share"><img src="./img/share.png" alt="shared card's botton"
+                      srcset="./img/share.png 1x, ./img/share@2x.png 2x"></a>
+                  <a href="#" class="card__save u-margin-left-3"><img src="./img/save.png" alt="save card's botton"
+                      srcset="./img/save.png 1x, ./img/save2x.png 2x"></a>
+                </div>
+              </div>
+              <div class="card__image-container">
+                <a href="#">
+                  <img class="card__image" src="img/card-img.png" alt="card's image"
+                    srcset="img/card-img.png 1x, img/card-img@2x.png 2x img/card-img@2x.png 3x">
+                </a>
+              </div>
+              <div class="card__rating">
+                <div class="card__rating-container">
+                  <p class="heading-h5">Rated: <span class="heading-h5--bold">Commercial</span> </p>
+                  <img class="u-margin-left-1" src="img/stars-rating.png" alt="stars rating"
+                    srcset="img/stars-rating.png 1x, img/stars-rating@2x.png 2x, img/stars-rating@2x.png 3x">
+                </div>
+              </div>
+              <div class="card__main">
+                <div class="card__text-content">
+                  <div class="card__title">
+                    <p class="heading-h2--bold">A movie that yells at you and geeks out in equal measures.</p>
+                    <p class="heading-h3">Going on a trip to America, looking for someone to join me on this epic
+                      journey
+                      through American…</p>
+                  </div>
+                </div>
+                <div class="card__topic">
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                </div>
+                <div class="card__interactive-btn">
+                  <div class="btn__interactive card-pray">
+                    <img class="u-margin-right-05" src="img/pray.png" alt="button to say thanks"
+                      srcset="img/pray.png 1x, img/pray@2x.png 2x, img/pray@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-share">
+                    <img class="u-margin-right-05" src="img/share.png" alt="button to say thanks"
+                      srcset="img/share.png 1x, img/share@2x.png 2x, img/share@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-money">
+                    <img class="u-margin-right-05" src="img/money-bag.png" alt="button to say thanks"
+                      srcset="img/money-bag.png 1x, img/money-bag@2x.png 2x, img/money-bag@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-dislike">
+                    <img class="u-margin-right-05" src="img/like.png" alt="button to say thanks"
+                      srcset="img/like.png 1x, img/like@2x.png 2x, img/like@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <div class="card__header">
+                <div class="avatar card-avatar">
+                  <img class="avatar__img" src="./img/avatar.png" alt="avatar"
+                    srcset="./img/avatar.png 1x, ./img/avatar@2x.png 2x">
+                  <img class="avatar__crown--left" src="./img/crown2x.png" alt="avatar"
+                    srcset="./img/crown.png 1x, ./img/crown2x.png 2x">
+                  <img class="avatar__dot" src="./img/dot.png" alt="avatar"
+                    srcset="./img/dot.png 1x, ./img/dot@2x.png 2x">
+                </div>
+                <div class="container card--colomn u-margin-left-1">
+                  <div class="row-content">
+                    <p class="avatar__name u-margin-bottom-05">Alen walker</p>
+                  </div>
+                  <div class="row-content">
+                    <p class="card__data">15th Apr, 19</p>
+                    <div class="row-content u-margin-left-15">
+                      <button class="btn btn-primary card__btn">Expert</button>
+                      <button class="btn btn-primary card__btn">Follower</button>
+                      <button class="btn btn-primary card__btn">Beginner</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-content card__functional-btn u-margin-right-2">
+                  <a href="#" class="card__share"><img src="./img/share.png" alt="shared card's botton"
+                      srcset="./img/share.png 1x, ./img/share@2x.png 2x"></a>
+                  <a href="#" class="card__save u-margin-left-3"><img src="./img/save.png" alt="save card's botton"
+                      srcset="./img/save.png 1x, ./img/save2x.png 2x"></a>
+                </div>
+              </div>
+              <div class="card__image-container">
+                <a href="#">
+                  <img class="card__image" src="img/card-img.png" alt="card's image"
+                    srcset="img/card-img.png 1x, img/card-img@2x.png 2x img/card-img@2x.png 3x">
+                </a>
+              </div>
+              <div class="card__rating">
+                <div class="card__rating-container">
+                  <p class="heading-h5">Rated: <span class="heading-h5--bold">Commercial</span> </p>
+                  <img class="u-margin-left-1" src="img/stars-rating.png" alt="stars rating"
+                    srcset="img/stars-rating.png 1x, img/stars-rating@2x.png 2x, img/stars-rating@2x.png 3x">
+                </div>
+              </div>
+              <div class="card__main">
+                <div class="card__text-content">
+                  <div class="card__title">
+                    <p class="heading-h2--bold">A movie that yells at you and geeks out in equal measures.</p>
+                    <p class="heading-h3">Going on a trip to America, looking for someone to join me on this epic
+                      journey
+                      through American…</p>
+                  </div>
+                </div>
+                <div class="card__topic">
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                  <div class="topic">
+                    <p class="heading-h3">Age: <span>32</span></p>
+                  </div>
+                </div>
+                <div class="card__interactive-btn">
+                  <div class="btn__interactive card-pray">
+                    <img class="u-margin-right-05" src="img/pray.png" alt="button to say thanks"
+                      srcset="img/pray.png 1x, img/pray@2x.png 2x, img/pray@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-share">
+                    <img class="u-margin-right-05" src="img/share.png" alt="button to say thanks"
+                      srcset="img/share.png 1x, img/share@2x.png 2x, img/share@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-money">
+                    <img class="u-margin-right-05" src="img/money-bag.png" alt="button to say thanks"
+                      srcset="img/money-bag.png 1x, img/money-bag@2x.png 2x, img/money-bag@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                  <div class="btn__interactive card-dislike">
+                    <img class="u-margin-right-05" src="img/like.png" alt="button to say thanks"
+                      srcset="img/like.png 1x, img/like@2x.png 2x, img/like@2x.png 3x">
+                    <span class="card__interactive-amount heading-h2">123</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div     >
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section-features"></section>
+
+    <section class="section-tours" id="section-tours"></section>
+
+    <section class="section-stories"></section>
+
+    <section class="section-book"></section>
+  </main>
+
+  <!-- <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit
+                        amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim
+                        sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
+                        gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
+                        Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus
+                        vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
+                        vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
+                        euismod nisi porta.
+                    </p>
+                    <a href="#" class="btn btn--green">Book now</a>
+                </div>
+            </div>
+        </div> -->
+</body>
+
+</html>

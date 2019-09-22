@@ -1,0 +1,30 @@
+.sign-in {
+    width: 100%;
+    height: 100vh;
+    background-color: $color-base-dark;
+    
+    &__container {
+        display: flex;
+        background-color: white;
+        height: 606px;
+    }
+    &__row {
+        align-items: center;
+        height: inherit;
+    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 47.7rem;
+        height: inherit;
+        background-color: $color-baje;
+    }
+    &__form {
+        flex: 1;
+        padding: 4rem;
+    }
+    &__text--gray {
+      color:  $color-base-gray;
+    }
+}

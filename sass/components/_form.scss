@@ -6,8 +6,12 @@
         width: fit-content;
         text-align: right;
     }
-    &__group:not(:last-child) {
-        margin-bottom: 4rem;
+    // &__group:not(:last-child) {
+    //     margin-bottom: 4rem;
+    // }
+    &--foget-password {
+        color: $color-primary;
+        text-decoration: none;
     }
 //for input item
     &__input {
@@ -30,7 +34,7 @@
         &--person {
             position: absolute;
             top: 1px;
-            padding: 15px 12px;
+            padding: 16px 13.5px;
             border-right: 1px solid $color-base-gray;
             &--error {
                 border-right: 1px solid $color-secondary-barbie_pink !important;
