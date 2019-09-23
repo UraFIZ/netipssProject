@@ -3,13 +3,13 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        width: fit-content;
+        width: auto;
         text-align: right;
     }
     // &__group:not(:last-child) {
     //     margin-bottom: 4rem;
     // }
-    &--foget-password {
+    &--links {
         color: $color-primary;
         text-decoration: none;
     }
@@ -34,7 +34,10 @@
         &--person {
             position: absolute;
             top: 1px;
-            padding: 16px 13.5px;
+            @include respond(tab-port) {
+                padding: 1.3rem 1.2rem;
+            }
+            padding: 1.5rem 1.48rem;
             border-right: 1px solid $color-base-gray;
             &--error {
                 border-right: 1px solid $color-secondary-barbie_pink !important;
@@ -43,7 +46,10 @@
         &--password {
             position: absolute;
             top: 1px;
-            padding: 15px 12px;
+            @include respond(tab-port) {
+                padding: 1.6rem 1rem;
+            }
+            padding: 1.6rem 1.35rem;
             border-right: 1px solid $color-base-gray;
             &--error {
                 border-right: 1px solid $color-secondary-barbie_pink !important;

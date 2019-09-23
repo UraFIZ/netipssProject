@@ -52,15 +52,24 @@ body {
   background-color: #9431E4;
   color: white; }
 
+@font-face {
+  font-family: "Avenir Next-Demibold";
+  src: url(../../css/fonts/AvenirNextLTPro-Demi.otf);
+  font-size: normal; }
+
+@font-face {
+  font-family: "Avenir Next-Mediam";
+  src: url(../../css/fonts/AvenirNextLTPro-Regular.otf);
+  font-size: normal; }
+
 body {
-  font-family: "Avenir Next Medium";
+  font-family: "Avenir Next-Mediam";
   font-weight: 500;
   color: #1F2A3A; }
 
 .heading-h1 {
   font-size: 2rem;
-  font-family: "Avenir Next Demibold";
-  font-weight: bold;
+  font-family: "Avenir Next-Demibold";
   line-height: 3rem;
   text-align: center; }
 
@@ -74,10 +83,10 @@ body {
     font-weight: bold; }
 
 .heading-h3 {
-  font-size: 1.4rem;
+  font-size: 1.4rem !important;
   line-height: 1.9rem; }
   .heading-h3--bold {
-    font-weight: bold; }
+    font-family: "Avenir Next-Demibold"; }
 
 .heading-h4 {
   font-size: 1.2rem;
@@ -105,6 +114,11 @@ body {
   @media only screen and (max-width: 53.75em) {
     .u-margin-bottom-medium {
       margin-bottom: 3rem !important; } }
+
+@media only screen and (max-width: 48em) {
+  .u-fixed-bottom {
+    position: fixed;
+    bottom: 0; } }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
@@ -174,13 +188,18 @@ body {
   margin-bottom: 2rem; }
 
 .sign-in {
-  width: 100%;
   height: 100vh;
   background-color: #1F2A3A; }
+  @media only screen and (max-width: 48em) {
+    .sign-in {
+      background-color: white; } }
   .sign-in__container {
     display: flex;
-    background-color: white;
-    height: 606px; }
+    background-color: white; }
+    @media only screen and (max-width: 48em) {
+      .sign-in__container {
+        flex-direction: column;
+        height: 100vh; } }
   .sign-in__row {
     align-items: center;
     height: inherit; }
@@ -191,9 +210,25 @@ body {
     width: 47.7rem;
     height: inherit;
     background-color: #F7F7F8; }
+    @media only screen and (max-width: 48em) {
+      .sign-in__logo {
+        width: auto;
+        height: 29.1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .sign-in__logo {
+        width: auto;
+        height: 36.4rem; } }
   .sign-in__form {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 4rem; }
+    @media only screen and (max-width: 48em) {
+      .sign-in__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: -70px; } }
   .sign-in__text--gray {
     color: #C6C9CE; }
 
@@ -203,16 +238,32 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1.6rem;
-  font-weight: bold;
   font-family: inherit;
   border: none;
   cursor: pointer;
   text-align: center; }
   .btn-primary, .btn-primary:link, .btn-primary:visited {
     padding: 1.35rem 0;
-    border-radius: 1.1rem;
+    border-radius: 9px;
     background: linear-gradient(to right, #772FE4, #9431E4);
-    width: 31.5rem; }
+    width: 31.5rem;
+    outline: none; }
+  .btn-primary--arrow {
+    position: relative;
+    padding: 1.35rem 0;
+    border-radius: 9px;
+    background: linear-gradient(to right, #772FE4, #9431E4);
+    width: 31.5rem;
+    outline: none; }
+  .btn-primary--arrow::before {
+    content: "";
+    position: absolute;
+    top: 39%;
+    right: 3%;
+    width: 20px;
+    height: 10px;
+    background-image: url(../../img/signIn-arrow.png);
+    background-repeat: no-repeat; }
   .btn-primary--border {
     background-color: white;
     padding: 1.35rem 0;
@@ -221,20 +272,24 @@ body {
     color: #772FE4;
     width: 31.5rem;
     text-align: center; }
-  .btn-primary:focus {
-    outline: none; }
+  .btn-primary:focus, .btn-primary--arrow:focus {
+    box-shadow: 0rem 0.2rem 1rem #FC997B; }
   .btn-primary:hover {
     color: #FC997B; }
-  .btn-primary:active {
+  .btn-primary:active, .btn-primary--arrow:active {
     box-shadow: 0rem 0.2rem 1rem #FC997B; }
   .btn-secondary {
     padding: 1.35rem 0;
     background-color: #F2EAFD;
     color: #772FE4;
-    border-radius: .4rem;
+    border-radius: 9px;
     width: 31.5rem; }
   .btn-secondary--fb {
     background-image: url(../../img/facebook-logo-5.png);
+    background-repeat: no-repeat;
+    background-position: 10% 50%; }
+  .btn-secondary--goog {
+    background-image: url(../../img/google-plus.png);
     background-repeat: no-repeat;
     background-position: 10% 50%; }
   .btn-secondary:active {
@@ -291,7 +346,7 @@ body {
 
 .card {
   display: flex;
-  width: 42.8rem;
+  max-width: 42.8rem;
   background-color: #fff;
   margin-bottom: 1.6rem;
   flex-direction: column;
@@ -374,10 +429,10 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: auto;
   text-align: right; }
 
-.form--foget-password {
+.form--links {
   color: #772FE4;
   text-decoration: none; }
 
@@ -399,15 +454,21 @@ body {
   .form__icon--person {
     position: absolute;
     top: 1px;
-    padding: 16px 13.5px;
+    padding: 1.5rem 1.48rem;
     border-right: 1px solid #C6C9CE; }
+    @media only screen and (max-width: 53.75em) {
+      .form__icon--person {
+        padding: 1.3rem 1.2rem; } }
     .form__icon--person--error {
       border-right: 1px solid #E84477 !important; }
   .form__icon--password {
     position: absolute;
     top: 1px;
-    padding: 15px 12px;
+    padding: 1.6rem 1.35rem;
     border-right: 1px solid #C6C9CE; }
+    @media only screen and (max-width: 53.75em) {
+      .form__icon--password {
+        padding: 1.6rem 1rem; } }
     .form__icon--password--error {
       border-right: 1px solid #E84477 !important; }
 
@@ -500,31 +561,41 @@ body {
   justify-content: center;
   max-width: 131.6rem;
   margin: 0 auto; }
-  @media only screen and (max-width: 75em) {
-    .row {
-      justify-content: center; } }
   .row:not(:last-child) {
     margin-bottom: 4rem; }
-  .row [class^="col-"] {
-    margin-bottom: 1.6rem; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 1.6rem; }
-      @media only screen and (max-width: 83.75em) {
-        .row [class^="col-"]:not(:last-child) {
-          margin-right: 0; } }
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 1.6rem; }
+    @media only screen and (max-width: 64em) {
+      .row [class^="col-"]:not(:last-child) {
+        margin-right: 0; } }
   .row .col-1-of-2 {
     flex: 0 0 calc((100% - 1.6rem) / 2); }
   .row .col-1-of-3 {
-    flex: 0 0 calc((100% - 2 * 1.6rem) / 3); }
-    @media only screen and (max-width: 83.75em) {
+    flex: 1 1 calc((100% - 2 * 1.6rem) / 3);
+    max-width: calc((100% - 2 * 1.6rem) / 3);
+    margin-bottom: 1.6rem; }
+    @media only screen and (max-width: 64em) {
       .row .col-1-of-3 {
-        flex: 0 0 calc((100% - 1.6rem) / 2); } }
-    @media only screen and (max-width: 53.75em) {
+        flex: 1 1 calc((100% - 1.6rem) / 2);
+        max-width: calc((100% - 1.6rem) / 2); } }
+    @media only screen and (max-width: 37.5em) {
       .row .col-1-of-3 {
-        flex: 0 0 100%; } }
+        flex: 0 0 100%;
+        max-width: 100%; } }
   .row .col-1-of-3:nth-child(3n + 0) {
     margin-right: 0; }
+  @media only screen and (max-width: 46em) {
+    .row .col-1-of-3:nth-child(odd) {
+      margin-right: 1.6rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .row .col-1-of-3:nth-child(odd) {
+      margin-right: 0; } }
   .row .col-2-of-3 {
     flex: 0 0 calc(2 * ((100% - 2 * 1.6rem) / 3) + 1.6rem); }
   .row .col-8-of-12 {
-    flex: 0 0 calc(8 * ((100% - 11 * 1.6rem) / 12) + 7 * 1.6rem); }
+    flex: 0 0 calc(8 * ((100% - 11 * 1.6rem) / 12) + 7 * 1.6rem);
+    width: calc(8 * ((100% - 11 * 1.6rem) / 12) + 7 * 1.6rem); }
+    @media only screen and (max-width: 48em) {
+      .row .col-8-of-12 {
+        flex: 0 0 calc(4 * ((100% - 11 * 1.6rem) / 12) + 3 * 1.6rem);
+        width: calc(8 * ((100% - 11 * 1.6rem) / 12) + 7 * 1.6rem); } }

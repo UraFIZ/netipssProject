@@ -1,13 +1,23 @@
+@font-face {
+   font-family: "Avenir Next-Demibold";
+   src: url(../../css/fonts/AvenirNextLTPro-Demi.otf);
+   font-size: normal;
+}
+@font-face {
+   font-family: "Avenir Next-Mediam";
+   src: url(../../css/fonts/AvenirNextLTPro-Regular.otf);
+   font-size: normal;
+}
 body {
-    font-family: "Avenir Next Medium";
+    font-family: "Avenir Next-Mediam";
     font-weight: 500;
     color: $color-base-dark;
 }
 
 .heading-h1 {
    font-size: $font-size-h1;
-   font-family: "Avenir Next Demibold";
-   font-weight: bold;
+   font-family: "Avenir Next-Demibold";
+   // font-weight: bold;
    line-height: 3rem;
    text-align: center;
 }
@@ -22,10 +32,10 @@ body {
     }
  }
  .heading-h3 {
-    font-size: $font-size-h3;
+    font-size: $font-size-h3 !important;
     line-height: 1.9rem;
     &--bold {
-        font-weight: bold;
+      font-family: "Avenir Next-Demibold";
     }
  }
  .heading-h4 {

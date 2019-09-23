@@ -1,12 +1,17 @@
 .sign-in {
-    width: 100%;
     height: 100vh;
     background-color: $color-base-dark;
-    
+    @include respond(mobDevise) {
+        background-color: white;
+    }
     &__container {
         display: flex;
         background-color: white;
-        height: 606px;
+        @include respond(mobDevise) {
+            flex-direction: column;
+            height: 100vh;
+        }
+
     }
     &__row {
         align-items: center;
@@ -16,13 +21,29 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include respond(mobDevise) {
+            width: auto;
+            height: 29.1rem;
+        }
+        @include respond(phone) {
+            width: auto;
+            height: 36.4rem;
+        }
         width: 47.7rem;
         height: inherit;
         background-color: $color-baje;
     }
     &__form {
-        flex: 1;
+        display: flex;
+        flex-direction: column;
         padding: 4rem;
+        @include respond(mobDevise) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: -70px;
+        }
     }
     &__text--gray {
       color:  $color-base-gray;
