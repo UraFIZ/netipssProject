@@ -2,7 +2,6 @@
     &__group {
         position: relative;
         display: flex;
-        flex-direction: column;
         width: auto;
         text-align: right;
     }
@@ -54,7 +53,64 @@
             &--error {
                 border-right: 1px solid $color-secondary-barbie_pink !important;
             }
+            @include respond(phone) {
+                padding: 1.2rem 0.85rem;
+            }
         }
+        &--shtrudel {
+            position: absolute;
+            top: 1px;
+            padding: 1.35rem 1.6rem;
+            border-right: 1px solid $color-base-gray;
+            @include respond(tab-port) {
+                padding: 1.2rem 1.4rem;
+            }
+            @include respond(phone) {
+                padding: 1rem 1.4rem;
+            }
+        }
+        &--email {
+            position: absolute;
+            top: 1px;
+            padding: 1.55rem 1.55rem;
+            border-right: 1px solid $color-base-gray;
+            @include respond(tab-port) {
+                padding: 1.25rem 1.35rem;
+            }
+            @include respond(phone) {
+                padding: 1.1rem 1.3rem;
+            }
+        }
+        &--age {
+            position: absolute;
+            top: 1px;
+            padding: 1.55rem 1.55rem;
+            border-right: 1px solid $color-base-gray;
+            @include respond(tab-port) {
+                padding: 1.25rem 1.35rem;
+            }
+            @include respond(phone) {
+                padding: 1.1rem 1.3rem;
+            }
+        }
+        &--phone {
+            position: absolute;
+            top: 1px;
+            padding: 1.30rem 1.45rem;
+            border-right: 1px solid $color-base-gray;
+            @include respond(tab-port) {
+                padding: 1rem 1.25rem;
+            }
+            @include respond(phone) {
+                padding: 0.75rem 1.15rem;
+            }
+        }
+        &--eye {
+            position: absolute;
+            top: 1.8rem;
+            right: 1.5rem;
+        }
+
 
     }
     //for input error item

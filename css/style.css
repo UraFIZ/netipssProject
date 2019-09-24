@@ -84,9 +84,12 @@ body {
 
 .heading-h3 {
   font-size: 1.4rem !important;
-  line-height: 1.9rem; }
+  line-height: 1.9rem;
+  font-weight: normal; }
   .heading-h3--bold {
     font-family: "Avenir Next-Demibold"; }
+  .heading-h3--purpur {
+    color: #772FE4; }
 
 .heading-h4 {
   font-size: 1.2rem;
@@ -129,6 +132,9 @@ body {
 .u-display-flex {
   display: flex;
   justify-content: center; }
+
+.u-for-screen-reader-purpes {
+  display: none; }
 
 .u-margin-top-big {
   margin-top: 8rem !important; }
@@ -284,6 +290,9 @@ body {
     color: #772FE4;
     border-radius: 9px;
     width: 31.5rem; }
+  .btn-secondary:hover {
+    background-color: #772FE4;
+    color: #F2EAFD; }
   .btn-secondary--fb {
     background-image: url(../../img/facebook-logo-5.png);
     background-repeat: no-repeat;
@@ -428,7 +437,6 @@ body {
 .form__group {
   position: relative;
   display: flex;
-  flex-direction: column;
   width: auto;
   text-align: right; }
 
@@ -471,6 +479,57 @@ body {
         padding: 1.6rem 1rem; } }
     .form__icon--password--error {
       border-right: 1px solid #E84477 !important; }
+    @media only screen and (max-width: 37.5em) {
+      .form__icon--password {
+        padding: 1.2rem 0.85rem; } }
+  .form__icon--shtrudel {
+    position: absolute;
+    top: 1px;
+    padding: 1.35rem 1.6rem;
+    border-right: 1px solid #C6C9CE; }
+    @media only screen and (max-width: 53.75em) {
+      .form__icon--shtrudel {
+        padding: 1.2rem 1.4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .form__icon--shtrudel {
+        padding: 1rem 1.4rem; } }
+  .form__icon--email {
+    position: absolute;
+    top: 1px;
+    padding: 1.55rem 1.55rem;
+    border-right: 1px solid #C6C9CE; }
+    @media only screen and (max-width: 53.75em) {
+      .form__icon--email {
+        padding: 1.25rem 1.35rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .form__icon--email {
+        padding: 1.1rem 1.3rem; } }
+  .form__icon--age {
+    position: absolute;
+    top: 1px;
+    padding: 1.55rem 1.55rem;
+    border-right: 1px solid #C6C9CE; }
+    @media only screen and (max-width: 53.75em) {
+      .form__icon--age {
+        padding: 1.25rem 1.35rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .form__icon--age {
+        padding: 1.1rem 1.3rem; } }
+  .form__icon--phone {
+    position: absolute;
+    top: 1px;
+    padding: 1.30rem 1.45rem;
+    border-right: 1px solid #C6C9CE; }
+    @media only screen and (max-width: 53.75em) {
+      .form__icon--phone {
+        padding: 1rem 1.25rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .form__icon--phone {
+        padding: 0.75rem 1.15rem; } }
+  .form__icon--eye {
+    position: absolute;
+    top: 1.8rem;
+    right: 1.5rem; }
 
 .form__input__error {
   font-size: 1.5rem;
@@ -599,3 +658,17 @@ body {
       .row .col-8-of-12 {
         flex: 0 0 calc(4 * ((100% - 11 * 1.6rem) / 12) + 3 * 1.6rem);
         width: calc(8 * ((100% - 11 * 1.6rem) / 12) + 7 * 1.6rem); } }
+
+.sign-in {
+  height: 100vh;
+  background-color: #1F2A3A; }
+  @media only screen and (max-width: 48em) {
+    .sign-in {
+      background-color: white; } }
+
+.registration {
+  height: 100vh;
+  background-color: #1F2A3A; }
+  @media only screen and (max-width: 48em) {
+    .registration {
+      background-color: white; } }

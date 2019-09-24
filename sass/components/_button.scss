@@ -70,11 +70,16 @@
     width: 31.5rem;
     
   }
+  &-secondary:hover {
+     background-color: $color-primary;
+     color: #F2EAFD
+  }
   &-secondary--fb{
       background-image: url(../../img/facebook-logo-5.png);
       background-repeat: no-repeat;
       background-position: 10% 50%;
   }
+
   &-secondary--goog{
     background-image: url(../../img/google-plus.png);
     background-repeat: no-repeat;

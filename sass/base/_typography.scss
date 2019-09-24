@@ -34,8 +34,12 @@ body {
  .heading-h3 {
     font-size: $font-size-h3 !important;
     line-height: 1.9rem;
+    font-weight: normal;
     &--bold {
       font-family: "Avenir Next-Demibold";
+    }
+    &--purpur {
+       color: $color-primary;
     }
  }
  .heading-h4 {

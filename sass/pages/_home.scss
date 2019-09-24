@@ -1,5 +1,16 @@
-.section-about {
-
+.sign-in {
+    height: 100vh;
+    background-color: $color-base-dark;
+    @include respond(mobDevise) {
+        background-color: white;
+    }
+}
+.registration {
+    height: 100vh;
+    background-color: $color-base-dark;
+    @include respond(mobDevise) {
+        background-color: white;
+    }
 }
 
 .section-features {
