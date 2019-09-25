@@ -72,15 +72,15 @@
         }
     }
     .col-2-of-3 {
-        flex: 0 0 calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+        max-width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
     }
     .col-8-of-12 {
         // firstly we find the width a single column without gaps (11) then we determinate the quontity of needed for us column (8) make multiyplition and then we add all the gaps which include in our 8 columns (7)
-        flex: 0 0 calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
-        width: calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
+        // flex: 0 0 calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
+        max-width: calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
         @include respond(mobDevise) {
-            flex: 0 0 calc(4 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 3 * #{$gutter-horizontal});
-            width: calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
+            // flex: 0 0 calc(4 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 3 * #{$gutter-horizontal});
+            max-width: calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
         }
     }
 

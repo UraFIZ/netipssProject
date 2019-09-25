@@ -4,51 +4,215 @@
         display: flex;
         width: auto;
         text-align: right;
+        @include respond(phone) {
+            margin-right:unset;
+        }
         margin-right: auto;
+        flex-wrap: wrap;
+        &-topic {
+            display: flex;
+        }
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        @include respond(mobDevise) {
+            align-items: center;
+         }
+        
     }
     &__checkbox:not(:checked), &__checkbox:checked {
         position: absolute;
         left: -9999px;
     }
     &__checkbox:not(:checked) + &__conformation, 
-&__checkbox:checked + &__conformation  {
-    position: relative;
-    padding-left: 4rem;
-    cursor: pointer;
-    padding-top: 3px;
-    // background-color: $color-primary;
-}
-&__checkbox:not(:checked) + &__conformation::after, 
-&__checkbox:checked + &__conformation::after  {
-    content: '\2713\0020';
-  position: absolute;
-  top: 27%;
-  left: 3%;
-  font-size: 1.3em;
-  line-height: 0.8;
-  color: $color-primary;
-  transition: all .2s;
-    // background-color: $color-primary;
-}
-&__checkbox:not(:checked) + &__conformation::after {
+    &__checkbox:checked + &__conformation  {
+        position: relative;
+        padding-left: 4rem;
+        cursor: pointer;
+        padding-top: 3px;
+
+    }
+    &__checkbox:not(:checked) + &__conformation::after, 
+    &__checkbox:checked + &__conformation::after  {
+        content: '\2713\0020';
+        position: absolute;
+        top: 27%;
+        left: 3%;
+        font-size: 1.3em;
+        line-height: 0.8;
+        color: $color-primary;
+        transition: all .2s;
+    }
+    &__checkbox:not(:checked) + &__conformation::after {
     opacity: 0;
     transform: scale(0);
-}
-&__checkbox:checked + &__conformation::after {
-    opacity: 1;
-    transform: scale(1);
-}
-&__checkbox:not(:checked) + &__conformation::before, 
-&__checkbox:checked + &__conformation::before  {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2.5rem;
-    height: 2.5rem;
-    border: $border-grey;
-    border-radius: 6px;
-}
+    }
+    &__checkbox:checked + &__conformation::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+    &__checkbox:not(:checked) + &__conformation::before, 
+    &__checkbox:checked + &__conformation::before  {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: $border-grey;
+        border-radius: 6px;
+    }
+
+    // topic
+    &__main-level {
+        flex-grow: 1;
+        width: 100%;
+        text-align: start;
+    }
+    &__topic-container {
+        display: flex;
+        flex-wrap: wrap;
+        @include respond(mobDevise) {
+           justify-content: center;
+        }
+        & > *{
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+        }
+        // & > *:not(:last-child) {
+        //     margin-right: 1rem;
+        // }
+    }
+    &__checkbox-topic:not(:checked), &__checkbox-topic:checked {
+        position: absolute;
+        left: -9999px;
+    }
+
+    &__topic {
+        position: relative;
+        padding: 0.8rem 2rem;
+        border-radius: 18px;
+        cursor: pointer;
+        color: white;
+        &--pink {
+
+            background-color: $color-secondary-barbie_pink;
+            border: 1px solid $color-secondary-barbie_pink;
+            &:after {
+                content: "";
+                display: none;
+                position: absolute;
+                top: 20%;
+                right: -1.7rem;
+                width: 2.8rem;
+                height: 2.8rem;
+                border-radius: 50%;
+                background-image: url(../../img/checkad-pink.svg);
+                background-repeat: no-repeat;
+            }
+        }
+        &--apricot {
+            background-color: $color-secondary-pink_apricot;
+            border: 1px solid $color-secondary-pink_apricot;
+            &:after {
+                content: "";
+                display: none;
+                position: absolute;
+                top: 20%;
+                right: -1.7rem;
+                width: 2.8rem;
+                height: 2.8rem;
+                border-radius: 50%;
+                background-image: url(../../img/checkad-apricot.svg);
+                background-repeat: no-repeat;
+               }
+            }
+            &--green {
+                background-color: $color-secondary-green;
+                border: 1px solid $color-secondary-green;
+                &:after {
+                    content: "";
+                    display: none;
+                    position: absolute;
+                    top: 20%;
+                    right: -1.7rem;
+                    width: 2.8rem;
+                    height: 2.8rem;
+                    border-radius: 50%;
+                    background-image: url(../../img/checkad-green.svg);
+                    background-repeat: no-repeat;
+                   }
+                }
+                &--purpur {
+                    background-color: $color-primary;
+                    border: 1px solid $color-primary;
+                    &:after {
+                        content: "";
+                        display: none;
+                        position: absolute;
+                        top: 20%;
+                        right: -1.7rem;
+                        width: 2.8rem;
+                        height: 2.8rem;
+                        border-radius: 50%;
+                        background-image: url(../../img/checkad-purpur.svg);
+                        background-repeat: no-repeat;
+                       }
+                    }
+                    &--blue {
+                        background-color: $color-secondary-blue;
+                        border: 1px solid $color-secondary-blue;
+                        &:after {
+                            content: "";
+                            display: none;
+                            position: absolute;
+                            top: 20%;
+                            right: -1.7rem;
+                            width: 2.8rem;
+                            height: 2.8rem;
+                            border-radius: 50%;
+                            background-image: url(../../img/checkad-blue.svg);
+                            background-repeat: no-repeat;
+                           }
+                        }
+    }
+    &__checkbox-topic:checked ~ &__topic--pink {
+        background-color: white;
+        color:$color-secondary-barbie_pink;
+    }
+    &__checkbox-topic:checked ~ &__topic--pink:after {
+        display: block;
+    }
+    &__checkbox-topic:checked ~ &__topic--apricot {
+        background-color: white;
+        color:$color-secondary-pink_apricot;
+    }
+    &__checkbox-topic:checked ~ &__topic--apricot:after {
+        display: block;
+    }
+    &__checkbox-topic:checked ~ &__topic--green {
+        background-color: white;
+        color:$color-secondary-green;
+    }
+    &__checkbox-topic:checked ~ &__topic--green:after {
+        display: block;
+    }
+    &__checkbox-topic:checked ~ &__topic--purpur {
+        background-color: white;
+        color:$color-primary;
+    }
+    &__checkbox-topic:checked ~ &__topic--purpur:after {
+        display: block;
+    }
+    &__checkbox-topic:checked ~ &__topic--blue {
+        background-color: white;
+        color:$color-primary;
+    }
+    &__checkbox-topic:checked ~ &__topic--blue:after {
+        display: block;
+    }
 
 
     &--links {

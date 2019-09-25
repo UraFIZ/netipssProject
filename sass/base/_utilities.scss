@@ -29,6 +29,13 @@
 .u-for-screen-reader-purpes {
     display: none;
 }
+.u-hidden-scroll {
+    overflow: auto;
+    @include respond(mobDevise) {
+        width: 100%;
+    }
+    width: 110%;
+}
 .u-margin-top-big { margin-top: 8rem !important; }
 .u-margin-top-huge { margin-top: 10rem !important; }
 .u-margin-left-0.5 {
@@ -36,6 +43,9 @@
 }
 .u-margin-left-1 {
     margin-left: 1rem;
+}
+.u-shedow {
+    box-shadow: 2px -2px 50px $color-base-light_gray;
 }
 .u-margin-left-15 {
     margin-left: 1.5rem;

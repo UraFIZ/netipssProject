@@ -2,6 +2,7 @@
     &__container {
         display: flex;
         background-color: white;
+        height: 884px;
         @include respond(mobDevise) {
             flex-direction: column;
             height: 100vh;
@@ -16,6 +17,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 47.7rem;
         @include respond(mobDevise) {
             width: auto;
             height: 29.1rem;
@@ -24,7 +26,7 @@
             width: auto;
             height: 36.4rem;
         }
-        width: 47.7rem;
+
         height: inherit;
         background-color: $color-baje;
     }
@@ -32,6 +34,8 @@
         display: flex;
         flex-direction: column;
         padding: 4rem;
+        max-width: 395px;
+        flex-grow: 1;
         @include respond(mobDevise) {
             display: flex;
             flex-direction: column;
