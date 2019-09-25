@@ -89,7 +89,8 @@ body {
   .heading-h3--bold {
     font-family: "Avenir Next-Demibold"; }
   .heading-h3--purpur {
-    color: #772FE4; }
+    color: #772FE4;
+    text-decoration: none; }
 
 .heading-h4 {
   font-size: 1.2rem;
@@ -193,50 +194,51 @@ body {
 .u-margin-bottom-2 {
   margin-bottom: 2rem; }
 
-.sign-in {
-  height: 100vh;
-  background-color: #1F2A3A; }
+.u-margin-bottom-3 {
+  margin-bottom: 3rem; }
+
+.authorization__container {
+  display: flex;
+  background-color: white; }
   @media only screen and (max-width: 48em) {
-    .sign-in {
-      background-color: white; } }
-  .sign-in__container {
-    display: flex;
-    background-color: white; }
-    @media only screen and (max-width: 48em) {
-      .sign-in__container {
-        flex-direction: column;
-        height: 100vh; } }
-  .sign-in__row {
-    align-items: center;
-    height: inherit; }
-  .sign-in__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 47.7rem;
-    height: inherit;
-    background-color: #F7F7F8; }
-    @media only screen and (max-width: 48em) {
-      .sign-in__logo {
-        width: auto;
-        height: 29.1rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .sign-in__logo {
-        width: auto;
-        height: 36.4rem; } }
-  .sign-in__form {
-    display: flex;
-    flex-direction: column;
-    padding: 4rem; }
-    @media only screen and (max-width: 48em) {
-      .sign-in__form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-        top: -70px; } }
-  .sign-in__text--gray {
-    color: #C6C9CE; }
+    .authorization__container {
+      flex-direction: column;
+      height: 100vh; } }
+
+.authorization__row {
+  align-items: center;
+  height: inherit; }
+
+.authorization__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47.7rem;
+  height: inherit;
+  background-color: #F7F7F8; }
+  @media only screen and (max-width: 48em) {
+    .authorization__logo {
+      width: auto;
+      height: 29.1rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .authorization__logo {
+      width: auto;
+      height: 36.4rem; } }
+
+.authorization__form {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem; }
+  @media only screen and (max-width: 48em) {
+    .authorization__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: -70px; } }
+
+.authorization__text--gray {
+  color: #C6C9CE; }
 
 .btn {
   display: inline-block;
@@ -438,7 +440,49 @@ body {
   position: relative;
   display: flex;
   width: auto;
-  text-align: right; }
+  text-align: right;
+  margin-right: auto; }
+
+.form__checkbox:not(:checked), .form__checkbox:checked {
+  position: absolute;
+  left: -9999px; }
+
+.form__checkbox:not(:checked) + .form__conformation,
+.form__checkbox:checked + .form__conformation {
+  position: relative;
+  padding-left: 4rem;
+  cursor: pointer;
+  padding-top: 3px; }
+
+.form__checkbox:not(:checked) + .form__conformation::after,
+.form__checkbox:checked + .form__conformation::after {
+  content: '\2713\0020';
+  position: absolute;
+  top: 27%;
+  left: 3%;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #772FE4;
+  transition: all .2s; }
+
+.form__checkbox:not(:checked) + .form__conformation::after {
+  opacity: 0;
+  transform: scale(0); }
+
+.form__checkbox:checked + .form__conformation::after {
+  opacity: 1;
+  transform: scale(1); }
+
+.form__checkbox:not(:checked) + .form__conformation::before,
+.form__checkbox:checked + .form__conformation::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #EBECED;
+  border-radius: 6px; }
 
 .form--links {
   color: #772FE4;
@@ -659,16 +703,9 @@ body {
         flex: 0 0 calc(4 * ((100% - 11 * 1.6rem) / 12) + 3 * 1.6rem);
         width: calc(8 * ((100% - 11 * 1.6rem) / 12) + 7 * 1.6rem); } }
 
-.sign-in {
+.auth-section {
   height: 100vh;
   background-color: #1F2A3A; }
   @media only screen and (max-width: 48em) {
-    .sign-in {
-      background-color: white; } }
-
-.registration {
-  height: 100vh;
-  background-color: #1F2A3A; }
-  @media only screen and (max-width: 48em) {
-    .registration {
+    .auth-section {
       background-color: white; } }

@@ -1,9 +1,4 @@
-.sign-in {
-    height: 100vh;
-    background-color: $color-base-dark;
-    @include respond(mobDevise) {
-        background-color: white;
-    }
+.authorization {
     &__container {
         display: flex;
         background-color: white;

@@ -4,10 +4,53 @@
         display: flex;
         width: auto;
         text-align: right;
+        margin-right: auto;
     }
-    // &__group:not(:last-child) {
-    //     margin-bottom: 4rem;
-    // }
+    &__checkbox:not(:checked), &__checkbox:checked {
+        position: absolute;
+        left: -9999px;
+    }
+    &__checkbox:not(:checked) + &__conformation, 
+&__checkbox:checked + &__conformation  {
+    position: relative;
+    padding-left: 4rem;
+    cursor: pointer;
+    padding-top: 3px;
+    // background-color: $color-primary;
+}
+&__checkbox:not(:checked) + &__conformation::after, 
+&__checkbox:checked + &__conformation::after  {
+    content: '\2713\0020';
+  position: absolute;
+  top: 27%;
+  left: 3%;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: $color-primary;
+  transition: all .2s;
+    // background-color: $color-primary;
+}
+&__checkbox:not(:checked) + &__conformation::after {
+    opacity: 0;
+    transform: scale(0);
+}
+&__checkbox:checked + &__conformation::after {
+    opacity: 1;
+    transform: scale(1);
+}
+&__checkbox:not(:checked) + &__conformation::before, 
+&__checkbox:checked + &__conformation::before  {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: $border-grey;
+    border-radius: 6px;
+}
+
+
     &--links {
         color: $color-primary;
         text-decoration: none;

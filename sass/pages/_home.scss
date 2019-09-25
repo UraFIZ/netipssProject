@@ -1,11 +1,4 @@
-.sign-in {
-    height: 100vh;
-    background-color: $color-base-dark;
-    @include respond(mobDevise) {
-        background-color: white;
-    }
-}
-.registration {
+.auth-section {
     height: 100vh;
     background-color: $color-base-dark;
     @include respond(mobDevise) {
@@ -13,19 +6,3 @@
     }
 }
 
-.section-features {
-
-
-}
-
-.section-tours {
-
-}
-
-.section-stories {
-
-}
-
-.section-book {
-
-}
