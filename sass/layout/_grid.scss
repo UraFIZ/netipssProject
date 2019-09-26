@@ -12,10 +12,10 @@
     margin: 0 auto;
     background-color: $color-content-bg;
     margin-top: 3rem;                 
-}   
-.row-content {
-    display: flex;
-}     
+   }   
+    .row-content {
+        display: flex;
+    }     
   .row {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +46,7 @@
     .col-1-of-2 {
         flex: 0 0 calc((100% - #{$gutter-horizontal}) / 2);  
     }
-
+//this grid is used for cards
     .col-1-of-3 {
         flex: 1 1 calc((100% - 2 * #{$gutter-horizontal}) / 3);
         max-width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
@@ -60,6 +60,7 @@
             max-width: 100%;
         }
     }
+
     .col-1-of-3:nth-child(3n + 0){
         margin-right: 0;
     }
@@ -71,9 +72,12 @@
             margin-right: 0;
         }
     }
+
+    
     .col-2-of-3 {
         max-width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
     }
+    //this grid is used for authrization section
     .col-8-of-12 {
         // firstly we find the width a single column without gaps (11) then we determinate the quontity of needed for us column (8) make multiyplition and then we add all the gaps which include in our 8 columns (7)
         // flex: 0 0 calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
@@ -83,5 +87,20 @@
             max-width: calc(8 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 7 * #{$gutter-horizontal});
         }
     }
+   
+    //this grid is used for header section
+    .col-7-of-12 {
+        border: 1px solid black;
+        flex-grow: 1;
+        flex-shrink: 5;
+        max-width: calc(7 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 6 * #{$gutter-horizontal});
+    }
+    .col-5-of-12 {
+        border: 1px solid black;
+        flex-grow: 1;
+        flex-shrink: 1;
+        max-width: calc(5 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 4 * #{$gutter-horizontal});
+    }
+    
 
 }
