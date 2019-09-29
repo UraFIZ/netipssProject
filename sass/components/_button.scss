@@ -8,6 +8,7 @@
     border: none;
     cursor: pointer;
     text-align: center;
+    box-sizing: border-box;
   &-primary,
   &-primary:link,
   &-primary:visited {
@@ -24,10 +25,14 @@
       background: white;
       color:  $color-primary;
       border: 1px solid $color-primary;
+      box-sizing: border-box;
     }
   }
   &-primary--arrow {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     padding: 1.35rem 0;
     border-radius: 9px;
     background: linear-gradient(

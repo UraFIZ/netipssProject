@@ -27,10 +27,7 @@
         margin-bottom: $gutter-vertical;
     }
     
-    @include respond(tab-port) {
-        // max-width: 50rem;
-        // padding: 0 3rem;
-    }
+
 
 
     [class^="col-"] {
@@ -90,17 +87,31 @@
    
     //this grid is used for header section
     .col-7-of-12 {
-        border: 1px solid black;
         flex-grow: 1;
         flex-shrink: 5;
         max-width: calc(7 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 6 * #{$gutter-horizontal});
+        @include respond(tab-port) {
+            max-width: 100%;
+         }
     }
     .col-5-of-12 {
-        border: 1px solid black;
         flex-grow: 1;
         flex-shrink: 1;
         max-width: calc(5 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 4 * #{$gutter-horizontal});
+        @include respond(tab-port) {
+            max-width: 100%;
+         }
     }
+   //this grid is used for the tip the world modal window (2row fields) 
+    .col-3-of-12 {
+        flex-grow: 1;
+        width: calc(3 * ((100% - 11 * #{$gutter-horizontal}) / 12) + 2 * #{$gutter-horizontal});
+        @include respond(mobDevise) {
+           width: 100%;
+        }
+    }
+
+
     
 
 }

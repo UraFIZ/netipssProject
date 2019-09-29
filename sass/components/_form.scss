@@ -228,11 +228,15 @@
         border: 1px solid $color-base-gray;
         width: 31.5rem;
         display: block;
-        border-radius: 9px;
+        border-radius: 5px;
         outline: none;
+        color: inherit;
         &__icon {
             padding-left: 6rem;
         }
+    }
+    &__input-data {
+        color: inherit;
     }
  //for img item   
     &__icon {
@@ -240,6 +244,7 @@
         &--person {
             position: absolute;
             top: 1px;
+            left: 0;
             @include respond(tab-port) {
                 padding: 1.3rem 1.2rem;
             }
@@ -252,6 +257,7 @@
         &--password {
             position: absolute;
             top: 1px;
+            left: 0;
             @include respond(tab-port) {
                 padding: 1.6rem 1rem;
             }
@@ -267,6 +273,7 @@
         &--shtrudel {
             position: absolute;
             top: 1px;
+            left: 0;
             padding: 1.35rem 1.6rem;
             border-right: 1px solid $color-base-gray;
             @include respond(tab-port) {
@@ -279,7 +286,21 @@
         &--email {
             position: absolute;
             top: 1px;
+            left: 0;
             padding: 1.55rem 1.55rem;
+            border-right: 1px solid $color-base-gray;
+            @include respond(tab-port) {
+                padding: 1.25rem 1.35rem;
+            }
+            @include respond(phone) {
+                padding: 1.1rem 1.3rem;
+            }
+        }
+        &--location {
+            position: absolute;
+            top: 1px;
+            left: 0;
+            padding: 1.35rem 1.55rem;
             border-right: 1px solid $color-base-gray;
             @include respond(tab-port) {
                 padding: 1.25rem 1.35rem;
@@ -291,6 +312,7 @@
         &--age {
             position: absolute;
             top: 1px;
+            left: 0;
             padding: 1.55rem 1.55rem;
             border-right: 1px solid $color-base-gray;
             @include respond(tab-port) {
@@ -303,6 +325,7 @@
         &--phone {
             position: absolute;
             top: 1px;
+            left: 0;
             padding: 1.30rem 1.45rem;
             border-right: 1px solid $color-base-gray;
             @include respond(tab-port) {
@@ -339,6 +362,7 @@
     &__label {
         position: absolute;
         top: -24px;
+        left: 0;
         font-size: 1.4rem;
         display: block;
         transition: all .3s;
@@ -356,13 +380,43 @@
         }
 
     }
+    &__upload-input {
+        display: none;
+    }
+    &__upload-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8rem;
+        height: 8rem;
+        border:$border-grey;
+        color: $color-base-dark;
+        font-size: 4rem;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+    &__no-pancele-label {
+        position: absolute;
+        top: -24px;
+        left: 0;
+        font-size: 1.4rem;
+        display: block;
+        transition: all .3s;
+    }
     //for p item
     &__notification {
+        display: none;
         margin-top: 1rem;
         font-size: 1.4rem;
         color: $color-secondary-barbie_pink;
     }
     //dinamic behavier
+    &__input:focus:invalid {
+        border: 1px solid $color-secondary-barbie_pink; 
+    }
+    &__input:focus:invalid ~ &__notification {
+        display: block;
+    }
     &__input:focus {
         border: 1px solid $color-primary-light;
         

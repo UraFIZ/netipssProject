@@ -1,18 +1,18 @@
 .header {
     padding: 2.6rem 0;
+
     &__logo-box {
         display: flex;
         align-items: center;
         height: 100%;
     }
     &__btn {
-        padding: 1.2rem 1.9rem;
-        width: auto;
+        padding: 1.2rem 1.9rem !important;
+        width: auto !important;
         font-family: "Avenir Next-Demibold";
     }
     &__right-container {
         display: flex;
-        justify-content: space-between;
         align-items: center;
     }
     &__message-link {
@@ -31,4 +31,22 @@
         color: white;
         border-radius: 40%;
     }
+    &__form {
+        padding: 1.7rem;
+        @include respond(mobDevise) {
+            padding: 3rem;
+         }
+    }
+}
+.cont-1, .cont-2 {
+    display: none;
+}
+.bla #tab1:checked ~ .cont-1 {
+    display: block;
+}
+#tab2:checked ~ .cont-1 {
+    display: none;
+}
+#tab2:checked ~ .cont-2 {
+    display: block;
 }

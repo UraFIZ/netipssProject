@@ -4,71 +4,65 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba($color-black, .8);
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transition: all .3s;
-
-    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
-        background-color: rgba($color-black, .3);
-    }
-
+    overflow-x: hidden;
+    overflow-y: auto;
     &__content {
         @include absCenter;
-
-        width: 75%;
-        background-color: $color-white;
-        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        background-color: white;
+        box-shadow: 0 2rem 4rem rgba($color-base-dark, .2);
         border-radius: 3px;
-        display: table;
+        display: flex;
+        flex-direction: column;
         overflow: hidden;
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
-    }
+        width: 65rem;
+        border-radius: 1rem;
+        @include respond(mobDevise) {
+            position: static;
+            width: 100%;
+            transform: translate(0,0) scale(1) !important;
+         }
 
-    &__left {
-        width: 33.333333%;
-        display: table-cell;
     }
-
-    &__right {
-        width: 66.6666667%;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 3rem 5rem;
-    }
-
-    &__img {
-        display: block;
-        width: 100%;
-    }
-
-    &__text {
-        font-size: 1.4rem;
+&__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 1.7rem;
+    border-bottom: $border-grey;
+}
+&__expended-fields:not(:last-child) {
+    width: 100%;
+    @include respond(mobDevise) {
         margin-bottom: 4rem;
-
-        -moz-column-count: 2;
-        -moz-column-gap: 4rem; //1em = 14px;
-        -moz-column-rule: 1px solid $color-grey-light-2;
-
-        column-count: 2;
-        column-gap: 4rem; //1em = 14px;
-        column-rule: 1px solid $color-grey-light-2;
-
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-    }
-
+     }
+}
+&__submit-button {
+    position: relative;
+    bottom: -1.7rem;
+    width: 109%;
+    right: 2.9rem;
+    border-radius: inherit;
+    @include respond(mobDevise) {
+        position: initial;
+        width: 100%;
+        border-radius: 5px;
+     }
+}
+&__error-not {
+    display: none;
+}
     //Open states
     &:target {
         opacity: 1;
         visibility: visible;
+        pointer-events: all
     }
 
     &:target &__content {
@@ -79,19 +73,40 @@
     &__close {
         &:link,
         &:visited {
-            color: $color-grey-dark;
-            position: absolute;
-            top: 2.5rem;
-            right: 2.5rem;
+            color: $color-base-dark;
             font-size: 3rem;
             text-decoration: none;
             display: inline-block;
             transition: all .2s;
             line-height: 1;
+            width: 3rem;
+            height: 3rem;
+            border: $border-grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         &:hover {
             color: $color-primary;
+        }
+    }
+    &__close-background {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color-base-dark, .8);
+        @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background-color: rgba($color-base-dark, .3);
+        }
+        transition: opacity 200ms;
+        &:hover {
+            opacity: 0.8;
         }
     }
 }

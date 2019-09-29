@@ -9,28 +9,32 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Netips</title>
 </head>
+<body>
 <section class="general-section">
     <h2 class="u-for-screen-reader-purpes">This is home/feed section</h2>
     <header class="header">
         <div class="row">
             <div class="col-7-of-12">
                 <div class="header__logo-box">
-                    <a class="heading-h3" href="#"> LOGO
-                        <img src="#" alt="Logo" class="header__logo">
+                    <a class="heading-h3" href="#">
+                        LOGO
+                        <img src="#" alt="Logo" class="header__logo" />
                     </a>
                 </div>
             </div>
             <div class="col-5-of-12">
                 <div class="header__right-container">
-                    <button class="btn header__btn btn-primary--border">Gat a tip</button>
-                    <button class="btn header__btn btn-primary">Tip the world</button>
-                    <a class="header__message-link" href="#"><img src="img/message.png"
-                            srcset="img/message.png 1x, img/message@2x.png 2x" alt="message notification">
+                    <button class="btn header__btn btn-primary--border u-margin-right-2">
+                        Gat a tip
+                    </button>
+                    <a href="#tip-the-world" class="btn header__btn btn-primary u-margin-right-4">Tip the world</a>
+                    <a class="header__message-link u-margin-right-4" href="#"><img src="img/message.png"
+                            srcset="img/message.png 1x, img/message@2x.png 2x" alt="message notification" />
                         <span class="header__tool-tip">23</span>
                     </a>
                     <div class="avatar__wrapper">
                         <img class="avatar u-margin-right-1" src="img/avatar-header.png"
-                            srcset="img/avatar-header.png 1x, img/avatar-header@2x.png 2x" alt="avatar">
+                            srcset="img/avatar-header.png 1x, img/avatar-header@2x.png 2x" alt="avatar" />
                         <p class="heading-h15 heading-h15--bold">Alan walker</p>
                         <div id="avatar-menu" class="avatar__drop-down">
                             <a class="avatar__item heading-h3 heading-h3--bold" href="#">Profile</a>
@@ -38,9 +42,11 @@
                         </div>
                         <a class="avatar__down" href="#avatar-menu"><img class="avatar__img avatar__img--down"
                                 src="img/chevron-down.png" srcset="img/chevron-down.png 1x, img/chevron-down@2x.png 2x"
-                                alt="chevron"> </a>
-                        <a class="avatar__up" href="#"><img class="avatar__img avatar__img--up" src="img/chevron.png"
-                                srcset="img/chevron.png 1x, img/chevron@2x.png 2x" alt="chevron"> </a>
+                                alt="chevron" />
+                        </a>
+                        <a class="avatar__up" href="#"><img class="avatar__img" src="img/chevron.png"
+                                srcset="img/chevron.png 1x, img/chevron@2x.png 2x" alt="chevron" />
+                        </a>
 
                     </div>
                 </div>
@@ -48,8 +54,121 @@
         </div>
     </header>
 </section>
+<div class="popup" id="tip-the-world">
+    <a href="#" class="popup__close-background"></a>
+    <div class="popup__content">
+        <div class="popup__header u-margin-bottom-25">
+            <h1 class="heading-h1">Tip the world</h1>
+            <a href="#" class="popup__close">&times;</a>
+        </div>
+        <form action="#" class="header__form">
+            <div class="form__group u-margin-bottom-35">
+                <input class="form__input popup__expended-fields" required type="text" name="text" id="create-tip-title"
+                    placeholder="Enter your title">
+                <label for="create-tip-title" class="form__label ">My tip request</label>
+                <p class="form__notification">This field is required</p>
+            </div>
+            <div class="form__group u-margin-bottom-35">
+                <textarea rows="3" class="form__input popup__expended-fields" required name="textarea" id="create-tip-content"
+                    placeholder="Enter your content"></textarea>
+                <label for="create-tip-content" class="form__label ">Content</label>
+                <p class="form__notification">This field is required</p>
+            </div>
+            <div class="form__group  u-margin-bottom-35">
+                <input class="form__input form__input__icon popup__expended-fields" type="text" name="location"
+                    id="tip-location" placeholder="click here to choose">
+                <label for="create-tip-content" class="form__no-pancele-label ">Location</label>
+                <img class="form__icon--location" src="./img/location.png"
+                    srcset="./img/location.png 1x, ./img/location@2x.png 2x" alt="icon for input">
+                    <p class="form__notification">This field is required</p>
+            </div>
+            <div class="row">
+                <div class="col-3-of-12">
+                    <div class="form__group">
+                        <select name="select-topic" class="form__input popup__expended-fields" aria-placeholder="click here to choose">
+                            <option class="" value="" disabled selected>click here to choose</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <label for="create-tip-content" class="form__no-pancele-label ">Topics</label>
+                        <p class="form__notification">This field is required</p>
+                    </div>
+                </div>
+                <div class="col-3-of-12">
+                    <div class="form__group">
+                        <select name="select-budjet" class="form__input popup__expended-fields" aria-placeholder="click here to choose">
+                            <option value="" disabled selected>click here to choose</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <label for="create-tip-content" class="form__no-pancele-label ">Budjet</label>
+                        <p class="form__notification">This field is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3-of-12">
+                        <div class="form__group">
+                            <select name="select-audience" class="form__input popup__expended-fields">
+                                <option class="" value="" disabled selected>click here to choose</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <label for="create-tip-content" class="form__no-pancele-label ">Audience</label>
+                            <p class="form__notification">This field is required</p>
+                        </div>
+                    </div>
+                    <div class="col-3-of-12">
+                        <div class="form__group">
+                            <select name="select-age" class="form__input popup__expended-fields">
+                                <option value="" disabled selected>click here to choose</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <label for="create-tip-content" class="form__no-pancele-label ">Age Range</label>
+                            <p class="form__notification">This field is required</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-3-of-12">
+                            <div class="form__group">
+                                <select name="select-date" class="form__input popup__expended-fields">
+                                    <option class="" value="" disabled selected>click here to choose</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Date</option>
+                                </select>
+                                <label for="create-tip-content" class="form__no-pancele-label ">Date</label>
+                            </div>
+                        </div>
+                        <div class="col-3-of-12">
+                            <div class="form__group">
+                                <select name="select-friends" class="form__input popup__expended-fields">
+                                    <option value="" disabled selected>click here to choose</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                                <label for="create-tip-content" class="form__no-pancele-label ">Friends</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <input class="form__upload-input" type="file" name="date" id="pick-date">
+                        <label class="form__upload-label" for="pick-date">+</label>
+                        <label for="pick-date" class="form__no-pancele-label ">Media</label>
+                    </div>
 
-<body>
+                    <button type="submit" class="btn btn-primary popup__submit-button">Tip the world</button>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 
 </html>
